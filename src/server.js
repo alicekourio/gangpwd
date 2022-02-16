@@ -5,7 +5,7 @@ const fastify = require('fastify')({ logger: true });
 
 // Declare a route
 fastify.get('/', async (request, reply) => {
-  return { hello: 'world' };
+  reply.send({ hello: 'world' });
 });
 
 fastify.post('/', async (request, reply) => {
